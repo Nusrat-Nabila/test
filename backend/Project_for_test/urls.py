@@ -19,8 +19,9 @@ from django.urls import path
 from product import views
 
 urlpatterns = [
-    path('', views.home, name='home'),  # root URL
     path('admin/', admin.site.urls),
-    path('product/', views.product_list, name='product-list'),
-    path('product/<int:pk>/', views.product_detail, name='product-detail'),
+    path('', views.home, name='home'),
+    path('api/products/', views.product_list, name='product-list'),
+    path('api/products/<int:pk>/', views.product_detail, name='product-detail'),
 ]
+
